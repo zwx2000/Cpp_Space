@@ -12,4 +12,11 @@
     - 内联函数 inline function  
     - 类型强转 Type Cast  
     - 命名空间 namespace  
-    - 字符串类 string
+    - 字符串类 string  
+- [DAY 3]()  
+    - 封装 Encapsulation  
+    - 类 Class (1)
+        - init到自动化
+        - initialList 初始化列表
+        - destructor 析构器
+        - Theory of 层次内存管理
