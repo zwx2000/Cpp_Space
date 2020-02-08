@@ -13,7 +13,7 @@
     - 类型强转 Type Cast  
     - 命名空间 namespace  
     - 字符串类 string  
-- [DAY 3]()  
+- [DAY 3](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day03)  
     - 封装 Encapsulation  
     - 类 Class (1)
         - init到自动化
