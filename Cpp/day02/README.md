@@ -41,7 +41,7 @@
 - [static_cast](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day02/09static_cast/main.cpp)  
     - 双隐 `double<->int`    
     - 单隐 `int->void`  
-- [reinterpret](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day02/10reinterpret_cast/main.cpp)  
+- [reinterpret_cast](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day02/10reinterpret_cast/main.cpp)  
     - 双不隐 `int* - int`  
     - `((int*)((int)arr+1)+1)`问题解析如下：  
         ```
