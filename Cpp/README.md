@@ -19,4 +19,13 @@
         - init到自动化
         - initialList 初始化列表
         - destructor 析构器
-        - Theory of 层次内存管理
+        - Theory of 层次内存管理  
+- [DAY 4](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day04)  
+    - 拷贝构造器 Copy Constructor
+    - this指针
+    - 赋值运算符重载 operator =
+    - string 揭秘
+    - 栈对象返回的问题
+    - 对象数组
+    - 实现钟表类 class Clock
+    - `<windows.h>`的`Sleep()`&`<unistd.h>`的`sleep()`
