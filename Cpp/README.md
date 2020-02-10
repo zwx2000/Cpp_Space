@@ -28,4 +28,11 @@
     - 栈对象返回的问题
     - 对象数组
     - 实现钟表类 class Clock
-    - `<windows.h>`的`Sleep()`&`<unistd.h>`的`sleep()`
+    - `<windows.h>`的`Sleep()`&`<unistd.h>`的`sleep()`  
+- [DAY 5](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day05)  
+    - Class Extension 类的扩展
+        - class member storage
+        - const in class
+        - static in class
+        - static const in class
+        - Pointer to class member
