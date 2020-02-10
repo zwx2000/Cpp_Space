@@ -39,6 +39,8 @@
         - 命名空间，即类名，A
         - 访问
             - 既可以通过对象访问，也可以不通过对象，直接通过类型访问
+    - [static修饰函数](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day05/07functionCount/main.cpp)
+        - 目的：管理静态变量
     - [一塔湖图](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day05/08towerlakelib/main.cpp)  
 - 协作
     - [static修饰类成员函数](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day05/09staticfuncmember/main.cpp)  
