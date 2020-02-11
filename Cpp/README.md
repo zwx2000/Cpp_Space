@@ -35,4 +35,14 @@
         - const in class
         - static in class
         - static const in class
-        - Pointer to class member
+        - Pointer to class member  
+- [DAY 6](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day06)  
+    - Friend
+        - Why Friend ？ set/get methods  
+        - Relationship  
+        - Friend function
+        - Friend class
+    - operator overload
+        - 重载引入
+        - 重载范例
+        - User-Defined Type cast 自定义类型强转
