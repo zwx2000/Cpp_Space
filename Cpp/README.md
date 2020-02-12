@@ -42,7 +42,19 @@
         - Relationship  
         - Friend function
         - Friend class
-    - operator overload
+    - operator overload (1)
         - 重载引入
         - 重载范例
-        - User-Defined Type cast 自定义类型强转
+        - User-Defined Type cast 自定义类型强转  
+- [DAY 7](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day07)
+    - operator overload (2)
+        - explicit
+        - Advanced Topics
+    - Inheritance 继承
+        - 代码可重用性
+        - 继承方式
+        - 派生类的组成
+        - 派生类的构造
+        - 派生类的拷贝构造
+        - 派生类的赋值重载
+        - 派生类的友元函数
