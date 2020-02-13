@@ -50,7 +50,7 @@
     - operator overload (2)
         - explicit
         - Advanced Topics
-    - Inheritance 继承
+    - Inheritance 继承 (1)
         - 代码可重用性
         - 继承方式
         - 派生类的组成
@@ -58,3 +58,14 @@
         - 派生类的拷贝构造
         - 派生类的赋值重载
         - 派生类的友元函数
+- [DAY 8](https://github.com/zwx2000/Cpp_Space/tree/master/Cpp/day08)
+    - Inheritance 继承 (1)
+        - 继承方式
+        - shadow
+        - Multiple Inheritance 多重继承
+    - Polymorphism 多态
+        - Assign Compatible 赋值兼容
+        - Conditions of Polymorphism
+            - 多态实现的条件
+            - Pure virtual function
+            - 依赖倒置原则

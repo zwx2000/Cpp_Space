@@ -8,7 +8,7 @@
         - RAII Theory "资源获取及初始化" new/construct
         - [自实现Smart Pointer](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day07/04smartPtr/main.cpp)
     - [Operator new/delete](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day07/05operatornewdelete/main.cpp)
-## 二、Inheritance 继承
+## 二、Inheritance 继承 (1)
 - 引入
     - [代码可重用性](https://github.com/zwx2000/Cpp_Space/blob/master/Cpp/day07/06codereuse/main.cpp)  
 
