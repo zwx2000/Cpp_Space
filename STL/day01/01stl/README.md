@@ -19,3 +19,12 @@
 - 支持泛型 Template  
 - [保存副本]()
 - 内存托管
+## 三、Sequence Container 序列容器
+- [vector之insert erase front back begin end]()
+- [vector之 =&size]()
+- [Nomodifying Operation]()
+- [Assignment]()
+    - random access 内存连续的容器
+    - 能用容器内部的算法，不要用std::的算法
+- [iterator 迭代器]()
+- [insert remove]()

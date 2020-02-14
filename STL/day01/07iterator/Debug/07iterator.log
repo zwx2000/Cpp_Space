@@ -1,0 +1,2 @@
+﻿  main.cpp
+E:\OldWang\STL\day01\07iterator\main.cpp(13,14): error C3892: “itr”: 不能给常量赋值
