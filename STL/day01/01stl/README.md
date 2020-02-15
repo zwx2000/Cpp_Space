@@ -28,3 +28,10 @@
     - 能用容器内部的算法，不要用std::的算法
 - [iterator 迭代器](https://github.com/zwx2000/Cpp_Space/blob/master/STL/day01/07iterator/main.cpp)
 - [insert remove](https://github.com/zwx2000/Cpp_Space/blob/master/STL/day01/08insertremove/main.cpp)
+- [sizecapacity]()
+- [vector压入对象]()
+- [vector压入对象指针]()
+    - 容器有内存托管的功能，但仅限于实体元素
+    - 若元素为指针类型，则指针被托管，而不是指针指向的空间被托管
+- [invalid iterator]()
+- [二维空间]()
