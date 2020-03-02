@@ -1,0 +1,188 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct _TreeNode
+{
+    int _data;
+    struct _TreeNode * _left;
+    struct _TreeNode * _right;
+}TreeNode;
+
+//TreeNode *initBst()
+//{
+//    return NULL;
+//}
+
+void initBst(TreeNode ** r)
+{
+    *r = NULL;
+}
+
+void insertBst(TreeNode ** r, int data)
+{
+    TreeNode * t = (*r);
+    if(*r == NULL)
+    {
+        *r = (TreeNode*)malloc(sizeof(TreeNode));
+        (*r)->_data = data;
+        (*r)->_left = (*r)->_right = NULL;
+    }
+    else
+    {
+        while(1)
+        {
+            if(data > t->_data)
+            {
+                if(t->_right == NULL)
+                {
+                    t->_right = (TreeNode*)malloc(sizeof(TreeNode));
+                    t->_right->_data = data;
+                    t->_right->_left = t->_right->_right = NULL;
+                    break;
+                }
+                t = t->_right;
+            }
+            else
+            {
+                if(t->_left == NULL)
+                {
+                    t->_left = (TreeNode*)malloc(sizeof(TreeNode));
+                    t->_left->_data = data;
+                    t->_left->_left = t->_left->_left = NULL;
+                    break;
+                }
+                t = t->_left;
+            }
+        }
+    }
+}
+
+void insertBstTraverse(TreeNode ** r, int data)
+{
+    if(*r == NULL)
+    {
+        *r = (TreeNode*)malloc(sizeof(TreeNode));
+        (*r)->_data = data;
+        (*r)->_left = (*r)->_right = NULL;
+    }
+    else
+    {
+        if(data > (*r)->_data)
+            insertBstTraverse(&(*r)->_right,data);
+        else
+            insertBstTraverse(&(*r)->_left,data);
+    }
+}
+
+void midOrderTraverse(TreeNode * r)
+{
+    if(r)
+    {
+        midOrderTraverse(r->_left);
+        printf("%d ",r->_data);
+        midOrderTraverse(r->_right);
+    }
+}
+
+TreeNode * searchBst(TreeNode * r, int find)
+{
+    while(r)
+    {
+        if(r->_data == find)
+            return r;
+        else if(find > r->_data)
+            r = r->_right;
+        else
+            r = r->_left;
+    }
+    return NULL;
+}
+
+//µİ¹é°æ
+TreeNode * searchBstRecursive(TreeNode * r, int find)
+{
+    if(r)
+    {
+        if(r->_data == find)
+            return r;
+        else if(find > r->_data)
+            return searchBstRecursive(r->_right,find);
+        else
+            return searchBstRecursive(r->_left,find);
+    }
+    return NULL;
+}
+
+TreeNode * getMinNodeBst(TreeNode * r)
+{
+    if(r)
+    {
+        while(r->_left)
+        {
+            r = r->_left;
+        }
+        return r;
+    }
+    return NULL;
+}
+
+TreeNode * getMaxNodeBst(TreeNode * r)
+{
+    if(r)
+    {
+        while(r->_right)
+        {
+            r = r->_right;
+        }
+        return r;
+    }
+    return NULL;
+}
+
+TreeNode * getParentBst(TreeNode *r,TreeNode * child)
+{
+    static TreeNode *parent = NULL;
+    if(r)
+    {
+        if(r->_left == child || r->_right == child)
+            parent = r;
+
+        getParentBst(r->_left,child);
+        getParentBst(r->_right,child);
+    }
+    return parent;
+}
+
+int main()
+{
+    //    TreeNode * root;
+    //    initBst(&root);
+
+    TreeNode * root = NULL;
+    insertBstTraverse(&root,30);
+    insertBstTraverse(&root,8);
+    insertBstTraverse(&root,15);
+    insertBstTraverse(&root,36);
+    insertBstTraverse(&root,100);
+    insertBstTraverse(&root,32);
+
+    midOrderTraverse(root);
+    putchar(10);
+
+    TreeNode * pfind = searchBstRecursive(root,100);
+    if(pfind)
+        printf("find %d\n",pfind->_data);
+    else
+        printf("find none\n");
+
+    TreeNode * mi = getMinNodeBst(root);
+    printf("%d\n",mi->_data);
+
+    TreeNode * ma = getMaxNodeBst(root);
+    printf("%d\n",ma->_data);
+
+    TreeNode * parent = getParentBst(root,pfind);
+    printf("father node: %d\n",parent->_data);
+
+    return 0;
+}
