@@ -153,6 +153,88 @@ TreeNode * getParentBst(TreeNode *r,TreeNode * child)
     return parent;
 }
 
+void deleteBst(TreeNode **r, TreeNode * pDel)
+{
+    TreeNode * t = *r, *parent, *minRight;
+
+    if(*r == NULL || pDel == NULL) return ;
+    parent = getParentBst(t,pDel);
+    if(pDel->_left == NULL && pDel->_right == NULL)
+    {
+        if(*r == pDel)
+        {
+            free(t);
+            *r = NULL;
+            return ;
+        }
+
+        if(parent->_left == pDel)
+            parent->_left = NULL;
+        else
+            parent->_right = NULL;
+
+        free(pDel);
+    }
+    else if(pDel->_left != NULL && pDel->_right == NULL)
+    {
+        if(*r == pDel)
+        {
+            *r = pDel->_left;
+            free(pDel);
+            return;
+        }
+        if(parent->_left == pDel)
+            parent->_left = pDel->_left;
+        else
+            parent->_right = pDel->_left;
+
+        free(pDel);
+    }
+    else if(pDel->_left == NULL && pDel->_right != NULL)
+    {
+        if(*r == pDel)
+        {
+            *r = pDel->_right;
+            free(pDel);
+            return;
+        }
+        if(parent->_right == pDel)
+            parent->_left = pDel->_right;
+        else
+            parent->_right = pDel->_right;
+
+        free(pDel);
+    }
+    else
+    {
+        minRight = getMinNodeBst(pDel->_right);
+        pDel->_data = minRight->_data;
+
+        parent = getParentBst(t,minRight);
+
+        if(minRight != pDel->_right)
+        {
+            parent->_left = minRight->_right;
+
+        }
+        else
+        {
+            parent->_right = minRight->_right;
+        }
+        free(minRight);
+    }
+}
+
+void destroyBst(TreeNode * r)
+{
+    if(r)
+    {
+        destroyBst(r->_left);
+        destroyBst(r->_right);
+        free(r);
+    }
+}
+
 int main()
 {
     //    TreeNode * root;
@@ -169,7 +251,8 @@ int main()
     midOrderTraverse(root);
     putchar(10);
 
-    TreeNode * pfind = searchBstRecursive(root,100);
+    TreeNode * pfind = searchBstRecursive(root,30);
+    TreeNode * pfind2 = searchBstRecursive(root,100);
     if(pfind)
         printf("find %d\n",pfind->_data);
     else
@@ -181,8 +264,17 @@ int main()
     TreeNode * ma = getMaxNodeBst(root);
     printf("%d\n",ma->_data);
 
-    TreeNode * parent = getParentBst(root,pfind);
-    printf("father node: %d\n",parent->_data);
+    TreeNode * parents = getParentBst(root,pfind2);
+    printf("%d's father node is %d\n",pfind2->_data,parents->_data);
+
+    deleteBst(&root,pfind);
+    midOrderTraverse(root);
+
+    destroyBst(root);
+    root = NULL;
+
+    if(root == NULL)
+        printf("\ntree is empty!\n");
 
     return 0;
 }
